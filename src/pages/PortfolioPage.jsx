@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPortfolio } from "../services/api";
+import { generateUrl } from "../utils/generateUrl";
 
 const PortfolioPage = () => {
   const [portfolioItems, setPortfolioItems] = useState([]);
@@ -74,7 +75,7 @@ const PortfolioPage = () => {
                         {item.images.map((image, index) => (
                           <img
                             key={index}
-                            src={image}
+                            src={generateUrl(image)}
                             alt={`${item.name} screenshot ${index + 1}`}
                             className="object-cover w-full h-48 rounded-lg shadow-sm"
                           />
