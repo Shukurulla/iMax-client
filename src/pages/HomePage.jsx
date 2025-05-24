@@ -2,19 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getServices } from "../services/api";
 import { generateUrl } from "../utils/generateUrl";
-import { 
-  FaCode, 
-  FaMobile, 
-  FaCloud, 
-  FaShieldAlt, 
-  FaRocket, 
+import {
+  FaCode,
+  FaMobile,
+  FaCloud,
+  FaShieldAlt,
+  FaRocket,
   FaUsers,
   FaAward,
   FaCheckCircle,
   FaArrowRight,
   FaStar,
-  FaQuoteLeft
+  FaQuoteLeft,
 } from "react-icons/fa";
+import { Logo, LogoTransparent } from "../../public";
 
 const HomePage = () => {
   const [services, setServices] = useState([]);
@@ -39,30 +40,30 @@ const HomePage = () => {
     { icon: FaUsers, number: "150+", label: "Mamnun mijozlar" },
     { icon: FaRocket, number: "200+", label: "Tugallangan loyihalar" },
     { icon: FaAward, number: "5+", label: "Yil tajriba" },
-    { icon: FaCode, number: "50+", label: "Texnologiyalar" }
+    { icon: FaCode, number: "50+", label: "Texnologiyalar" },
   ];
 
   const features = [
     {
       icon: FaCode,
       title: "Web Development",
-      description: "Zamonaviy va responsiv veb-saytlar yaratamiz"
+      description: "Zamonaviy va responsiv veb-saytlar yaratamiz",
     },
     {
       icon: FaMobile,
       title: "Mobile Apps",
-      description: "iOS va Android uchun mobil ilovalar"
+      description: "iOS va Android uchun mobil ilovalar",
     },
     {
       icon: FaCloud,
       title: "Cloud Solutions",
-      description: "Bulutli texnologiyalar va hosting"
+      description: "Bulutli texnologiyalar va hosting",
     },
     {
       icon: FaShieldAlt,
       title: "Cybersecurity",
-      description: "Ma'lumotlar xavfsizligi va himoya"
-    }
+      description: "Ma'lumotlar xavfsizligi va himoya",
+    },
   ];
 
   const testimonials = [
@@ -70,14 +71,14 @@ const HomePage = () => {
       name: "Jasur Karimov",
       position: "Biznes direktor",
       text: "IMAX IT Company bizning kompaniyamiz uchun ajoyib veb-sayt yaratdi. Professional yondashuv va sifatli natija.",
-      rating: 5
+      rating: 5,
     },
     {
       name: "Dilnoza Rahimova",
       position: "Startup asoschisi",
       text: "Mobil ilovamizni ishlab berishda yordam berganingiz uchun rahmat. Juda tez va sifatli ish.",
-      rating: 5
-    }
+      rating: 5,
+    },
   ];
 
   return (
@@ -93,11 +94,6 @@ const HomePage = () => {
 
         <div className="container relative z-10 grid items-center gap-12 py-20 lg:grid-cols-2">
           <div className="text-white">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 text-sm font-medium text-blue-200 bg-blue-800 bg-opacity-50 rounded-full backdrop-blur-sm">
-                🚀 Professional IT Solutions
-              </span>
-            </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-6xl">
               Kelajakni
               <span className="block text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
@@ -105,10 +101,10 @@ const HomePage = () => {
               </span>
             </h1>
             <p className="mb-8 text-xl text-blue-100 leading-relaxed">
-              Zamonaviy texnologiyalar bilan biznesingizni raqamli dunyoga olib chiqamiz. 
-              Innovatsion yechimlar va professional yondashuv.
+              Zamonaviy texnologiyalar bilan biznesingizni raqamli dunyoga olib
+              chiqamiz. Innovatsion yechimlar va professional yondashuv.
             </p>
-            
+
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 to="/services"
@@ -147,7 +143,7 @@ const HomePage = () => {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl -rotate-12 animate-pulse opacity-80"></div>
               <div className="relative p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl border border-white border-opacity-20">
                 <img
-                  src="/hero-image.svg"
+                  src={LogoTransparent}
                   alt="IT Solutions"
                   className="w-full max-w-md mx-auto"
                 />
@@ -163,7 +159,8 @@ const HomePage = () => {
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold">Bizning imkoniyatlar</h2>
             <p className="max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300">
-              Zamonaviy texnologiyalar va professional yondashuv bilan sizning ehtiyojlaringizni qondiramiz
+              Zamonaviy texnologiyalar va professional yondashuv bilan sizning
+              ehtiyojlaringizni qondiramiz
             </p>
           </div>
 
@@ -178,8 +175,12 @@ const HomePage = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-white transition-all duration-300 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl group-hover:scale-110 group-hover:rotate-6">
                     <Icon className="text-2xl" />
                   </div>
-                  <h3 className="mb-4 text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                  <h3 className="mb-4 text-xl font-semibold">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
               );
             })}
@@ -217,7 +218,9 @@ const HomePage = () => {
                           className="object-cover w-16 h-16 rounded-xl"
                         />
                         <div className="ml-4">
-                          <h3 className="text-xl font-semibold">{service.name}</h3>
+                          <h3 className="text-xl font-semibold">
+                            {service.name}
+                          </h3>
                         </div>
                       </div>
                       <p className="mb-6 text-gray-600 dark:text-gray-300 line-clamp-3">
@@ -228,7 +231,9 @@ const HomePage = () => {
                           <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                             {service.price}
                           </div>
-                          <div className="text-sm text-gray-500">{service.duration}</div>
+                          <div className="text-sm text-gray-500">
+                            {service.duration}
+                          </div>
                         </div>
                         <div className="p-3 text-blue-600 transition-all duration-300 bg-blue-50 rounded-xl group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-900 dark:text-blue-400">
                           <FaArrowRight />
@@ -285,7 +290,9 @@ const HomePage = () => {
                     </div>
                     <div className="ml-4">
                       <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-gray-500">{testimonial.position}</div>
+                      <div className="text-sm text-gray-500">
+                        {testimonial.position}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -303,7 +310,8 @@ const HomePage = () => {
             Loyihangizni boshlashga tayyormisiz?
           </h2>
           <p className="max-w-3xl mx-auto mb-8 text-xl text-blue-100">
-            Bizga bog'laning va biz sizning g'oyalaringizni professional IT yechimlar bilan hayotga tatbiq etamiz!
+            Bizga bog'laning va biz sizning g'oyalaringizni professional IT
+            yechimlar bilan hayotga tatbiq etamiz!
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Link
@@ -326,4 +334,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;    
+export default HomePage;

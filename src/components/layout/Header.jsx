@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
+import { LogoTransparent } from "../../../public";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           to="/"
           className="text-2xl font-bold text-blue-700 dark:text-blue-400"
         >
-          IMAX IT Company
+          <img src={LogoTransparent} className="max-w-[200px]" alt="" />
         </Link>
 
         {/* Desktop Menu */}

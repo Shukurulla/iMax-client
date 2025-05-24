@@ -190,11 +190,6 @@ const ContactPage = () => {
 
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 text-sm font-medium text-blue-200 bg-blue-800 bg-opacity-50 rounded-full backdrop-blur-sm">
-                📞 Let's Connect
-              </span>
-            </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-6xl">
               Biz bilan
               <span className="block text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
@@ -262,9 +257,9 @@ const ContactPage = () => {
       {/* Main Contact Section */}
       <section className="py-20 bg-gray-50 dark:bg-slate-800">
         <div className="container">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-12 items-start lg:grid-cols-2">
             {/* Contact Form */}
-            <div className="p-8 bg-white rounded-2xl shadow-2xl dark:bg-slate-900">
+            <div className="p-8 bg-white  rounded-2xl shadow-2xl dark:bg-slate-900">
               <div className="mb-8">
                 <h2 className="mb-4 text-3xl font-bold">
                   Loyiha haqida gaplashing
@@ -574,7 +569,7 @@ const ContactPage = () => {
             <div className="lg:col-span-2">
               <div className="overflow-hidden rounded-2xl shadow-2xl h-96">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1212.1110278570511!2d69.2798461432335!3d41.32559081584836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b685b1e7941%3A0x9c79d2a5e373408!2z0KLQsNGI0LrQtdC90YLRgdC60LjQuSDQmNCkINCS0LDRgNC6!5e0!3m2!1sru!2s!4v1684839384359!5m2!1sru!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d747.0195550580256!2d59.611706194074685!3d42.45836276509308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dd9bc7ffcd1c1b%3A0xcc1676f22816072!2sIT-Park%20Qaraqalpaqstan!5e1!3m2!1sru!2s!4v1748084504414!5m2!1sru!2s"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
