@@ -21,7 +21,7 @@ import {
   FaGithub,
   FaCalendarAlt,
 } from "react-icons/fa";
-import { LogoTransparent } from "../../public";
+import { Coworking, LogoTransparent } from "../../public";
 
 const AboutPage = () => {
   const [aboutInfo, setAboutInfo] = useState(null);
@@ -221,7 +221,7 @@ const AboutPage = () => {
             <div className="relative">
               <div className="relative p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl border border-white border-opacity-20">
                 <img
-                  src={LogoTransparent}
+                  src={Coworking}
                   alt="About Us"
                   className="w-full max-w-md mx-auto"
                 />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
-import { LogoTransparent } from "../../../public";
+import { LogoDarkMode, LogoTransparent } from "../../../public";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,11 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           to="/"
           className="text-2xl font-bold text-blue-700 dark:text-blue-400"
         >
-          <img src={LogoTransparent} className="max-w-[200px]" alt="" />
+          {darkMode ? (
+            <img src={LogoDarkMode} className="max-w-[200px]" alt="" />
+          ) : (
+            <img src={LogoTransparent} className="max-w-[200px]" alt="" />
+          )}
         </Link>
 
         {/* Desktop Menu */}

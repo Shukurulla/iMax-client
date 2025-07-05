@@ -20,6 +20,7 @@ import { Logo, LogoTransparent } from "../../public";
 const HomePage = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
+  console.log(localStorage.getItem("darkMode"));
 
   useEffect(() => {
     const fetchServices = async () => {
